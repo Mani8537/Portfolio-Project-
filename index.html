@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alex Morgan – Full Stack Developer Portfolio" />
+  <title>Alex Morgan | Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">AM<span>.</span></div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__greeting">Hello, I'm</p>
+      <h1 class="hero__name">Alex Morgan</h1>
+      <h2 class="hero__role">Full Stack <span>Developer</span></h2>
+      <p class="hero__desc">I build clean, fast, and beautiful web experiences. Passionate about React, Node.js, and open-source.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__avatar">
+        <div class="avatar__ring"></div>
+        <div class="avatar__inner">AM</div>
+      </div>
+      <div class="hero__dots"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <h2 class="section__title">About <span>Me</span></h2>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>I'm a Full Stack Developer with <strong>3+ years of experience</strong> building web applications from the ground up. I love turning complex problems into simple, elegant solutions.</p>
+          <p>When I'm not coding, you'll find me contributing to open-source projects, reading tech blogs, or exploring UI design trends.</p>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num">20+</span>
+              <span class="stat__label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">3+</span>
+              <span class="stat__label">Years Exp.</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">15+</span>
+              <span class="stat__label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__card">
+          <div class="info__item"><span class="info__label">Name</span><span>Alex Morgan</span></div>
+          <div class="info__item"><span class="info__label">Role</span><span>Full Stack Developer</span></div>
+          <div class="info__item"><span class="info__label">Location</span><span>San Francisco, CA</span></div>
+          <div class="info__item"><span class="info__label">Email</span><span>alex@example.com</span></div>
+          <div class="info__item"><span class="info__label">Available</span><span class="badge">Open to Work</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <h2 class="section__title">My <span>Skills</span></h2>
+      <div class="skills__grid">
+        <div class="skill__card">
+          <div class="skill__icon">⚛️</div>
+          <h3>React.js</h3>
+          <div class="skill__bar"><div class="skill__fill" style="--w:90%"></div></div>
+          <span>90%</span>
+        </div>
+        <div class="skill__card">
+          <div class="skill__icon">🟩</div>
+          <h3>Node.js</h3>
+          <div class="skill__bar"><div class="skill__fill" style="--w:85%"></div></div>
+          <span>85%</span>
+        </div>
+        <div class="skill__card">
+          <div class="skill__icon">🐍</div>
+          <h3>Python</h3>
+          <div class="skill__bar"><div class="skill__fill" style="--w:75%"></div></div>
+          <span>75%</span>
+        </div>
+        <div class="skill__card">
+          <div class="skill__icon">🗄️</div>
+          <h3>MongoDB</h3>
+          <div class="skill__bar"><div class="skill__fill" style="--w:80%"></div></div>
+          <span>80%</span>
+        </div>
+        <div class="skill__card">
+          <div class="skill__icon">🎨</div>
+          <h3>CSS / Tailwind</h3>
+          <div class="skill__bar"><div class="skill__fill" style="--w:88%"></div></div>
+          <span>88%</span>
+        </div>
+        <div class="skill__card">
+          <div class="skill__icon">☁️</div>
+          <h3>AWS / Cloud</h3>
+          <div class="skill__bar"><div class="skill__fill" style="--w:70%"></div></div>
+          <span>70%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <h2 class="section__title">Featured <span>Projects</span></h2>
+      <div class="projects__grid">
+
+        <div class="project__card">
+          <div class="project__header" style="background: linear-gradient(135deg,#0f2027,#203a43,#2c5364)">
+            <span class="project__tag">React · Node · MongoDB</span>
+          </div>
+          <div class="project__body">
+            <h3>TaskFlow App</h3>
+            <p>A full-stack project management tool with real-time updates, drag-and-drop boards, and team collaboration features.</p>
+            <div class="project__links">
+              <a href="#" class="btn btn--sm">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--ghost">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project__card">
+          <div class="project__header" style="background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+            <span class="project__tag">Python · FastAPI · PostgreSQL</span>
+          </div>
+          <div class="project__body">
+            <h3>WeatherNow API</h3>
+            <p>A RESTful API that aggregates weather data from multiple sources and serves it with caching, rate limiting, and auth.</p>
+            <div class="project__links">
+              <a href="#" class="btn btn--sm">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--ghost">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project__card">
+          <div class="project__header" style="background: linear-gradient(135deg,#0d0d0d,#1a1a1a,#2d1b69)">
+            <span class="project__tag">React · Firebase · Stripe</span>
+          </div>
+          <div class="project__body">
+            <h3>ShopEasy Store</h3>
+            <p>An e-commerce platform with product management, cart, Stripe payments, and an admin dashboard.</p>
+            <div class="project__links">
+              <a href="#" class="btn btn--sm">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--ghost">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <h2 class="section__title">Get In <span>Touch</span></h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p>Have a project in mind or want to collaborate? Feel free to reach out — I usually reply within 24 hours.</p>
+          <div class="contact__links">
+            <a href="mailto:alex@example.com" class="contact__link">📧 alex@example.com</a>
+            <a href="https://github.com" target="_blank" class="contact__link">🐙 github.com/alexmorgan</a>
+            <a href="https://linkedin.com" target="_blank" class="contact__link">💼 linkedin.com/in/alexmorgan</a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm">
+          <input type="text" placeholder="Your Name" required class="form__input" />
+          <input type="email" placeholder="Your Email" required class="form__input" />
+          <textarea placeholder="Your Message" rows="5" required class="form__input"></textarea>
+          <button type="submit" class="btn btn--primary btn--full">Send Message ✉️</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Alex Morgan. Built with ❤️ and deployed on GitHub Pages.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
