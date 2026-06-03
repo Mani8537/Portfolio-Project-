@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hyperlocal Price Tracker — Hyderabad</title>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">₹</span>
+      <div>
+        <div class="logo-title">Hyperlocal Price Tracker</div>
+        <div class="logo-sub">Hyderabad · Compare grocery prices instantly</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <select id="pincode-select" onchange="onPincodeChange()">
+        <option value="500001">Secunderabad — 500001</option>
+        <option value="500032">Banjara Hills — 500032</option>
+        <option value="500072">Gachibowli — 500072</option>
+        <option value="500081">Madhapur — 500081</option>
+        <option value="500034">Ameerpet — 500034</option>
+      </select>
+      <button id="refresh-btn" onclick="refreshPrices()">↻ Refresh prices</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+  <div class="stat-card">
+    <div class="stat-label">Items tracked</div>
+    <div class="stat-value" id="stat-items">—</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Platforms</div>
+    <div class="stat-value" id="stat-platforms">—</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Pin codes</div>
+    <div class="stat-value" id="stat-pincodes">—</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Last updated</div>
+    <div class="stat-value" id="stat-updated">—</div>
+  </div>
+</div>
+
+<!-- ── MAIN ── -->
+<main>
+
+  <!-- LEFT: Compare panel -->
+  <section class="panel">
+    <h2>Compare prices</h2>
+    <div class="filter-row">
+      <div class="filter-group">
+        <label>Category</label>
+        <select id="category-select" onchange="loadItems()"></select>
+      </div>
+      <div class="filter-group">
+        <label>Item</label>
+        <select id="item-select" onchange="loadCompare()"></select>
+      </div>
+    </div>
+
+    <div id="compare-results" class="compare-grid"></div>
+
+    <div class="chart-section">
+      <div class="chart-header">
+        <span>Price trend (7 days)</span>
+        <div class="platform-tabs" id="platform-tabs"></div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="trend-chart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIGHT: Cheapest basket panel -->
+  <section class="panel">
+    <h2>Cheapest in your area</h2>
+    <p class="panel-sub">Best price per item across all platforms for your pin code</p>
+    <div id="cheapest-results" class="cheapest-list"></div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>Open-source · MIT License · Built with Python Flask + Chart.js · Data is simulated for demonstration</p>
+</footer>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
